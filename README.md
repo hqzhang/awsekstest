@@ -1,4 +1,5 @@
 # EKS Getting Started Guide Configuration
+```
 Terraform v0.12.25
 This is the full configuration from https://www.terraform.io/docs/providers/aws/guides/eks-getting-started.html
 
@@ -48,9 +49,9 @@ config_map_aws_auth = ....
 
 7)login UI with token
   http://127.0.0.1:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
+```
 
-
-
+```
 1)list eks
   aws eks list-clusters
   "clusters": [ "terraform-eks-demo"]
@@ -75,3 +76,4 @@ http://127.0.0.1:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kube
 kubectl apply -f https://raw.githubusercontent.com/hashicorp/learn-terraform-provision-eks-cluster/master/kubernetes-dashboard-admin.rbac.yaml
 kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep service-controller-token | awk '{print $1}')
 
+```
